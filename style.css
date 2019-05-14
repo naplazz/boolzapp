@@ -2,47 +2,117 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
- .container {
-  width: 100vw;
-  height: 100vh;
+
+.container {
+  width: 80vw;
+  height: 89vh;
   margin: auto;
-  border: 1px solid black;
+  border: 1px solid #EBEBED;
   display: flex;
 }
 
 .column-header {
-
-
-  height: 7%;
-  background-color: #ece5dd;
+  height: 9vh;
+  background-color: #EEEEEE;
+  border: 1px solid #dddddd;
+  padding: 7px 15px;
 }
-.column-left {
-  width: 30%;
 
+.column-left {
+  width: 35vw;
+}
+.column-search {
+  padding: 5px 25px;
+  background-color: #F8F8F8;
+}
+.column-search > input {
+  width: 100%;
+  border-radius: 5%;
+  margin: auto;
+}
+.chat-history-element{
+display: flex;
+border: 0.5px solid #dddddd;
+padding: 10px;
 }
 .column-right {
-  width: 70%;
+  width: 65vw;
   height: auto;
 
 }
+.column-header-right
+ {
+
+  display: flex;
+}
+.contact-details {
+  margin: auto 15px;
+}
+.contact-details .nome {
+  color: black;
+  margin-bottom: 3px;
+}
+.contact-details .dettagli {
+  color: grey;
+  font-size: small;
+}
+.div-icons-left {
+  text-align: right;
+  padding: 0px;
+
+}
+.div-icons-left > .fas {
+  font-size: 25px;
+  color: #1e1e1e;
+  margin-left: 20px;
+
+}
+.div-icons-right {
+width: 20vw;
+margin:  auto 0;
+text-align: right;
+}
+#myimg {
+  width: 35px;
+  border-radius:50%;
+  margin: auto;
+
+}
+.div-icons-right > .fas {
+  font-size: 20px;
+  color: #1e1e1e;
+  margin-left: 20px;
+}
+.flexgrow {
+  flex-grow: 1;
+}
+#myimgh {
+  border-radius:50%;
+
+}
+#imghead {
+  height: 100%;
+  border-radius:50%;
+}
+
 .column-content-right {
-  border: 1px solid black;
-  height: 85%;
+  border: 1px solid #dddddd;
+  height: 70vh;
   background-image: url("imgbg.png");
   padding: 30px;
   display: flex;
   flex-direction: column;
-
-
+  overflow: scroll;
 }
-
+.column-search {
+  border: 1px solid #dddddd;
+  height: 8vh;
+}
 .column-input {
-  height: 8%;
-  background-color: #ece5dd;
-
-
+  height: 10vh;
+  background-color: #EEEEEE;
+  border: 1px solid #dddddd;
 }
 
 input {
@@ -50,10 +120,9 @@ input {
   margin: 10px;
   height: 30px;
 }
+
 .first-child {
-flex-grow: 1;
-
-
+  flex-grow: 1;
 }
 
 .msgUtente {
@@ -63,20 +132,20 @@ flex-grow: 1;
   text-align: right;
   height: 30px;
   margin: 10px;
-
-
 }
+
 .msgUtente span {
   background-color: white;
   padding: 7px 30px;
   border-radius: 5%;
 }
+
 .msgInterlocutore {
   width: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
-
 }
+
 .msgInterlocutore span {
   background-color: #dcf8c6;
   padding: 7px 30px;
