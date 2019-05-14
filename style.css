@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+ .container {
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  border: 1px solid black;
+  display: flex;
+}
+
+.column-header {
+
+
+  height: 7%;
+  background-color: #ece5dd;
+}
+.column-left {
+  width: 30%;
+
+}
+.column-right {
+  width: 70%;
+  height: auto;
+
+}
+.column-content-right {
+  border: 1px solid black;
+  height: 85%;
+  background-image: url("imgbg.png");
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.column-input {
+  height: 8%;
+  background-color: #ece5dd;
+
+
+}
+
+input {
+  width: 600px;
+  margin: 10px;
+  height: 30px;
+}
+.first-child {
+flex-grow: 1;
+
+
+}
+
+.msgUtente {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: right;
+  height: 30px;
+  margin: 10px;
+
+
+}
+.msgUtente span {
+  background-color: white;
+  padding: 7px 30px;
+  border-radius: 5%;
+}
+.msgInterlocutore {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+.msgInterlocutore span {
+  background-color: #dcf8c6;
+  padding: 7px 30px;
+  border-radius: 5%;
+}
