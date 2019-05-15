@@ -26,10 +26,16 @@
   padding: 5px 25px;
   background-color: #F8F8F8;
 }
-.column-search > input {
-  width: 100%;
-  border-radius: 5%;
+.column-search > .inputcont > input {
+  width: 80%;
   margin: auto;
+
+}
+.column-search > .inputcont {
+  background-color: white;
+  margin: auto;
+  border-radius: 25%;
+  padding: 2;
 }
 .chat-history-element{
 display: flex;
@@ -40,6 +46,9 @@ padding: 10px;
   width: 65vw;
   height: auto;
 
+}
+.column-header-left {
+  height: 9vh;
 }
 .column-header-right
  {
@@ -113,18 +122,29 @@ text-align: right;
   height: 10vh;
   background-color: #EEEEEE;
   border: 1px solid #dddddd;
+  display: flex;
+
+
+}
+.column-input-element {
+margin: auto;
+
 }
 
 input {
-  width: 600px;
+  width: 500px;
   margin: 10px;
   height: 30px;
+
 }
 
 .first-child {
   flex-grow: 1;
 }
+.last-ms{
+  text-align: end;
 
+}
 .msgUtente {
   width: 100%;
   margin-top: 10px;
