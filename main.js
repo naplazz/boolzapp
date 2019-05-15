@@ -23,11 +23,13 @@ $('#sendBtn').click(function() {
     if (optionVal === "user") {
       $('.column-content-right').append('<div class="msgUtente msg">' + '<span>' + userMsg + '</span>' + '</div>');
       setTimeout(function() {
-        $('.column-content-right').append('<div class="msgInterlocutore msg">' + '<span>' + userMsg + '<span>' + '</div>');
+        $('.column-content-right').append('<div class="msgInterlocutore msg">' + '<span>' + 'Ciao, messaggio ricevuto!' + '<span>' + '</div>');
       }, 1000);
     } else if (optionVal === "interlocutore") {
       $('.column-content-right').append('<div class="msgInterlocutore msg">' + '<span>' + userMsg + '<span>' + '</div>');
-      $('.column-content-right').append('<div class="msgUtente msg">' + '<span>' + userMsg + '</span>' + '</div>');
+      setTimeout(function() {
+        $('.column-content-right').append('<div class="msgUtente msg">' + '<span>' + 'Ciao, messaggio ricevuto!' + '</span>' + '</div>');
+      }, 1000);
     } else {
       alert('Non hai selezionato chi invia il messaggio');
     };
