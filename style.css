@@ -3,7 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.fas, .fa, .far{
+  cursor: pointer;
+}
+.chat-history-element:hover {
+  background-color: #eaeaea;
+}
+.selected {
+  background-color: #dddddd;
+}
+.selected:hover {
+  background-color: #dddddd;
+}
 .container {
   width: 80vw;
   height: 89vh;
@@ -24,7 +35,7 @@
 }
 .column-search {
   padding: 5px 25px;
-  background-color: #F8F8F8;
+  /* background-color: #F8F8F8; */
 }
 .column-search > .inputcont > input {
   width: 80%;
