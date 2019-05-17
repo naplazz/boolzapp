@@ -12,11 +12,15 @@
 </head>
 
 <body>
-  <select class="selectSender" name="">
-    <option id="msgFrom" value="">Seleziona chi invia il messaggio</option>
-    <option id="msgFrom" value="user">Utente</option>
-    <option id="msgFrom" value="interlocutore">Interlocutore</option>
-  </select>
+  <div class="select-sender">
+
+
+    <select class="selectSender" name="">
+      <option id="msgFrom" value="">Seleziona chi invia il messaggio</option>
+      <option id="msgFrom" value="user">Utente</option>
+      <option id="msgFrom" value="interlocutore">Interlocutore</option>
+    </select>
+  </div>
   <section class="container">
 
     <div class="column-left">
@@ -33,7 +37,7 @@
       <div class="column-search">
         <div class="inputcont">
           <i class="fas fa-search"></i>
-         <input type="text" id="searchText" name="" value="" placeholder="cerca messaggio">
+          <input type="text" id="searchText" name="" value="" placeholder="cerca messaggio">
         </div>
       </div>
 
@@ -55,6 +59,8 @@
           <div class="contact-details">
             <p class="nome">Mario</p><span class="last-ms">11:15</span>
             <p class="dettagli">Ultimo messaggio Mario</p>
+
+
           </div>
 
         </div>
@@ -108,7 +114,7 @@
       </div>
       <div class="column-input">
         <div class="column-input-element"> <i class="far fa-smile"></i></div>
-        <div class="column-input-element" class="flexgrow"> <input type="text" id="inputMsg"  name="" value="" placeholder="Scrivi il messaggio"></div>
+        <div class="column-input-element" class="flexgrow"> <input type="text" id="inputMsg" name="" value="" placeholder="Scrivi il messaggio"></div>
         <div class="column-input-element"> <i id="sendBtn" class="fas fa-paper-plane"></i></div>
       </div>
 
