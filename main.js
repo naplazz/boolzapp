@@ -1,3 +1,4 @@
+
 var convMario = [
   ["ciao come stai Mario", 1],
   ["tutto bene grazie", 2],
@@ -20,7 +21,7 @@ var convMichele = [
   ["ciao come stai Michele", 1],
   ["tutto bene grazie", 2],
   ["ok", 1]
-];
+]
 
 
 
@@ -63,11 +64,21 @@ for (var i = 0; i < friends.length; i++) {
   clnTpl.find('.nome').text(friends[i].nome);
   clnTpl.find('#myimg').attr('src', friends[i].foto);
   clnTpl.find('.last-ms').text(friends[i].lastmes);
-  clnTpl.find('.conversazione').text(friends[i].conversazione[0]);
+
+
+  // for (var a = 0; a < friends[i].conversazione.length; a++) {
+  //   var convTemp = clnTpl.find('.conversazione').clone();
+  //
+  //
+  //   var messaggio = friends[i].conversazione[a][0];
+  //   var identificativo = friends[i].conversazione[a][1];
+  //     $('.contact-details').text(friends.conversazione)
+  //
+  // }
+clnTpl.find('.conversazione').text(messaggio[i]);
+
+  //
 }
-
-
-
 
 // --inizio funzione che permette di modificare chat element
 $(".chat-history-element").click(function() {
@@ -75,7 +86,8 @@ $(".chat-history-element").click(function() {
   $(".chat-history-element").removeClass('selected');
   $(this).addClass('selected');
   $('.column-header').find('.nome').text(contactName);
-  var selezionato = $(".chat-history-element .selected");
+  var selezionato = $(".selected");
+
 
 });
 $('#sendBtn').click(function() {
