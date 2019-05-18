@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+.hidden {
+  display: none;
+}
 .fas, .fa, .far{
   cursor: pointer;
 }
@@ -49,7 +52,7 @@
   padding: 2;
 }
 .chat-history-element{
-display: flex;
+
 border: 0.5px solid #dddddd;
 padding: 10px;
 }
@@ -119,7 +122,7 @@ text-align: right;
 .column-content-right {
   border: 1px solid #dddddd;
   height: 70vh;
-  background-image: url("imgbg.png");
+  background-image: url("img/imgbg.png");
   padding: 30px;
   display: flex;
   flex-direction: column;
