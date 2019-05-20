@@ -1,120 +1,87 @@
-
-var convMario = [
-  ["ciao come stai Mario", 1],
-  ["tutto bene grazie", 2],
-  ["ok", 1]
-];
-
-var convLuisa = [
-  ["ciao come stai Luisa", 1],
-  ["tutto bene grazie", 2],
-  ["ok", 1]
-];
-
-var convMrina = [
-  ["ciao come stai Marina", 1],
-  ["tutto bene grazie", 2],
-  ["ok", 1]
-];
-
-var convMichele = [
-  ["ciao come stai Michele", 1],
-  ["tutto bene grazie", 2],
-  ["ok", 1]
-]
-
-
-
 var friends = [{
     id: 1,
-    nome: "Marina",
+    nome: "Mario",
     foto: "img/friend1.png",
     lastmes: "11:30",
-    conversazione: convMario
+    conversazione: "ciao come stai Mario"
   },
   {
     id: 2,
     nome: "Marina",
     foto: "img/friend4.png",
     lastmes: "11:30",
-    conversazione: convMrina
+    conversazione: "ciao come stai Marina"
   },
   {
     id: 3,
     nome: "Michele",
     foto: "img/friend3.png",
     lastmes: "11:30",
-    conversazione: convMichele
+    conversazione: "ciao come stai Michele"
   },
   {
     id: 4,
     nome: "Luisa",
     foto: "img/friend2.png",
     lastmes: "11:30",
-    conversazione: convLuisa
+    conversazione: "ciao come stai Luisa"
   }
 ];
+
 
 
 for (var i = 0; i < friends.length; i++) {
   var clnTpl = $('.chat-history-element').clone().removeClass('hidden');
 
   $('.column-content').append(clnTpl[i]);
-
   clnTpl.find('.nome').text(friends[i].nome);
   clnTpl.find('#myimg').attr('src', friends[i].foto);
   clnTpl.find('.last-ms').text(friends[i].lastmes);
-
-
-  // for (var a = 0; a < friends[i].conversazione.length; a++) {
-  //   var convTemp = clnTpl.find('.conversazione').clone();
-  //
-  //
-  //   var messaggio = friends[i].conversazione[a][0];
-  //   var identificativo = friends[i].conversazione[a][1];
-  //     $('.contact-details').text(friends.conversazione)
-  //
-  // }
-clnTpl.find('.conversazione').text(messaggio[i]);
-
-  //
+  clnTpl.find('.conversazione').text(friends[i].conversazione);
 }
+
 
 // --inizio funzione che permette di modificare chat element
 $(".chat-history-element").click(function() {
+  $('.msg').addClass('hidden')
   var contactName = $(this).find('.nome').text();
   $(".chat-history-element").removeClass('selected');
   $(this).addClass('selected');
   $('.column-header').find('.nome').text(contactName);
-  var selezionato = $(".selected");
+  var conv = $(this).find('.conversazione').text();
+  console.log(conv)
+  var msu = $('.msgInterlocutore').clone();
+  $('column-content-right').append(msu)
+  $('.msgInterlocutore').removeClass('hidden').find('span').text(conv)
 
 
 });
 $('#sendBtn').click(function() {
+
   var userMsg = $('#inputMsg').val();
-  var userMessageLeft = "<p>" + userMsg + "</p>"
-  var interlocutoreMessageLeft = 'ciao mess ricevuto';
-  var userMessage = '<div class="msgUtente msg">' + '<span>' + userMessageLeft + '</span>' + '</div>';
-  var interlocutoreMessage = '<div class="msgInterlocutore msg">' + '<span>' + interlocutoreMessageLeft + '<span>' + '</div>';
 
   if (userMsg) {
-    if ($('.chat-history-element').hasClass('selected')) {
-      // console.log(userMessageLeft)
-      $(this).find('.contact-details').text();
-      setTimeout(function() {
-        $(this).find('.contact-details').append(interlocutoreMessageLeft);
-      }, 1000);
-    }
+    var newmes = $('.msgUtente').clone().removeClass('hidden')
+    newmes.find('span').text(userMsg)
+    $('.column-content-right').append(newmes)
+    setTimeout(function () {
+      var newmesi = $('.msgInterlocutore').clone().removeClass('hidden')
+      newmesi.find('span').text("risposta automatica")
+      $('.column-content-right').append(newmesi)
+      
+      $('.selected').find('.conversazione').text(rightLastMes);
 
 
-
-    $('#inputMsg').val('');
+    }, 1000);
+    var rightLastMes = $('.msg:last-child').text()
+    $('.selected').find('.conversazione').text(rightLastMes);
 
   } else {
     alert('messaggio vuoto')
   }
-
+  $('#inputMsg').val('');
 });
+
 
 // --inizio funzione che permette di modificare chat element
 
